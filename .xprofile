@@ -1,0 +1,4 @@
+xinput --set-prop 9 303 -0.8
+xrandr --newmode "1920x1080_144" 452.50 1920 2088 2296 2672 1080 1083 1088 1177 -hsync +vsync
+xrandr --addmode DisplayPort-2 1920x1080_144
+xrandr --output DisplayPort-2 --mode 1920x1080_144
