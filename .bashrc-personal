@@ -1,0 +1,8 @@
+#list
+alias ls='lsd'
+alias la='lsd -a'
+alias ll='lsd -la'
+alias l='lsd'
+alias l.="lsd -A | egrep '^\.'"
+
+eval "$(starship init bash)"
