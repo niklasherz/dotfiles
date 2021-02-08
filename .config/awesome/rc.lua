@@ -1141,6 +1141,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- gaps
 beautiful.useless_gap = 5
+client.connect_signal("focus", function(c) c.border_color = "#03fcdb" end)
 
 
 -- }}}
