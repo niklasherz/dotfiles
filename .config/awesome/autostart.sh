@@ -12,7 +12,7 @@ run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 
 run "xrandr --output Display-Port-2 --mode 1920x1080 --rate 144 &"
 run "xinput set-prop 8 303 -1"
-run "xinput set-prop 8 156 1.2 0 0 0 1.2 0 0 0 1"
+run "xinput set-prop 8 156 1.3 0 0 0 1.3 0 0 0 1"
 
 
 run "nm-applet"
