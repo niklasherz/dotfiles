@@ -214,10 +214,16 @@ def init_widgets_list():
                        foreground = colors[2],
                        background = colors[0]
                        ),
-              widget.Image(
-                       filename = "~/.config/qtile/icons/python.png",
-                       mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')}
-                       ),
+              # widget.Image(
+              #          filename = "~/.config/qtile/icons/python.png",
+              #          mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')}
+              #          ),
+                       widget.TextBox(
+                                foreground = darkText,
+                                background = colors[4],
+                                text = "⏻",
+                                mouse_callbacks ={'Button1': lambda qtile: qtile.cmd_spawn("shutdown-dialog")}
+                                ),
               widget.GroupBox(
                        font = "Ubuntu Bold",
                        fontsize = 9,
@@ -308,12 +314,12 @@ def init_widgets_list():
             #            background = colors[4],
             #            fontsize = 14
             #            ),
-              widget.TextBox(
-                       foreground = darkText,
-                       background = colors[4],
-                       text = "⏻",
-                       mouse_callbacks ={'Button1': lambda qtile: qtile.cmd_spawn("shutdown-dialog")}
-                       ),
+              # widget.TextBox(
+              #          foreground = darkText,
+              #          background = colors[4],
+              #          text = "⏻",
+              #          mouse_callbacks ={'Button1': lambda qtile: qtile.cmd_spawn("shutdown-dialog")}
+              #          ),
             #   widget.TextBox(
             #            text = "Updates",
             #            padding = 5,
