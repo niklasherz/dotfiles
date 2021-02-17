@@ -9,9 +9,14 @@ from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from typing import List  # noqa: F401
 
-mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
-myTerm = "alacritty"                             # My terminal of choice
+mod = "mod4"                                     # Sets mod key
+myTerm = "alacritty"                             # My terminal
 myConfig = "/home/nik/.config/qtile/config.py"    # The Qtile config file location
+
+
+## TODO: Seperate workspaces for screens, Bindings for additional Applications, Widgets and Color Schemes
+
+
 
 keys = [
          ### The essentials
@@ -57,10 +62,10 @@ keys = [
              lazy.to_screen(1),
              desc='Keyboard focus to monitor 2'
              ),
-         Key([mod], "r",
-             lazy.to_screen(2),
-             desc='Keyboard focus to monitor 3'
-             ),
+         # Key([mod], "r",
+         #     lazy.to_screen(2),
+         #     desc='Keyboard focus to monitor 3'
+         #     ),
          ### Switch focus of monitors
          Key([mod], "period",
              lazy.next_screen(),
@@ -121,103 +126,9 @@ keys = [
          Key([mod, "shift"], "m",
              lazy.window.toggle_fullscreen(),
              desc='toggle fullscreen'
-             ),
-         ### Stack controls
-         Key([mod, "shift"], "space",
-             lazy.layout.rotate(),
-             lazy.layout.flip(),
-             desc='Switch which side main pane occupies (XmonadTall)'
-             ),
-         # Key([mod], "space",
-         #     lazy.layout.next(),
-         #     desc='Switch window focus to other pane(s) of stack'
-         #     ),
-         Key([mod, "control"], "Return",
-             lazy.layout.toggle_split(),
-             desc='Toggle between split and unsplit sides of stack'
-             ),
-         ### Dmenu scripts launched with ALT + CTRL + KEY
-         Key(["mod1", "control"], "e",
-             lazy.spawn("./.dmenu/dmenu-edit-configs.sh"),
-             desc='Dmenu script for editing config files'
-             ),
-         Key(["mod1", "control"], "m",
-             lazy.spawn("./.dmenu/dmenu-sysmon.sh"),
-             desc='Dmenu system monitor script'
-             ),
-         Key(["mod1", "control"], "p",
-             lazy.spawn("passmenu"),
-             desc='Passmenu'
-             ),
-         Key(["mod1", "control"], "r",
-             desc='Dmenu reddio script'
-             ),
-         Key(["mod1", "control"], "s",
-             lazy.spawn("./.dmenu/dmenu-surfraw.sh"),
-             desc='Dmenu surfraw script'
-             ),
-         Key(["mod1", "control"], "t",
-             lazy.spawn("./.dmenu/dmenu-trading.sh"),
-             desc='Dmenu trading programs script'
-             ),
-         Key(["mod1", "control"], "i",
-             lazy.spawn("./.dmenu/dmenu-scrot.sh"),
-             desc='Dmenu scrot script'
-             ),
-         ### My applications launched with SUPER + ALT + KEY
-         Key([mod, "mod1"], "b",
-             lazy.spawn("tabbed -r 2 surf -pe x '.surf/html/homepage.html'"),
-             desc='lynx browser'
-             ),
-         Key([mod, "mod1"], "l",
-             lazy.spawn(myTerm+" -e lynx gopher://distro.tube"),
-             desc='lynx browser'
-             ),
-         Key([mod, "mod1"], "n",
-             lazy.spawn(myTerm+" -e newsboat"),
-             desc='newsboat'
-             ),
-         Key([mod, "mod1"], "r",
-             lazy.spawn(myTerm+" -e rtv"),
-             desc='reddit terminal viewer'
-             ),
-         Key([mod, "mod1"], "e",
-             lazy.spawn(myTerm+" -e neomutt"),
-             desc='neomutt'
-             ),
-         Key([mod, "mod1"], "m",
-             lazy.spawn(myTerm+" -e sh ./scripts/toot.sh"),
-             desc='toot mastodon cli'
-             ),
-         Key([mod, "mod1"], "t",
-             lazy.spawn(myTerm+" -e sh ./scripts/tig-script.sh"),
-             desc='tig'
-             ),
-         Key([mod, "mod1"], "f",
-             lazy.spawn(myTerm+" -e sh ./.config/vifm/scripts/vifmrun"),
-             desc='vifm'
-             ),
-         Key([mod, "mod1"], "j",
-             lazy.spawn(myTerm+" -e joplin"),
-             desc='joplin'
-             ),
-         Key([mod, "mod1"], "c",
-             lazy.spawn(myTerm+" -e cmus"),
-             desc='cmus'
-             ),
-         Key([mod, "mod1"], "i",
-             lazy.spawn(myTerm+" -e irssi"),
-             desc='irssi'
-             ),
-         Key([mod, "mod1"], "y",
-             lazy.spawn(myTerm+" -e youtube-viewer"),
-             desc='youtube-viewer'
-             ),
-         Key([mod, "mod1"], "a",
-             lazy.spawn(myTerm+" -e ncpamixer"),
-             desc='ncpamixer'
-             ),
+             )
 ]
+
 
 group_names = [("WWW", {'layout': 'monadtall'}),
                ("DEV", {'layout': 'monadtall'}),
@@ -251,23 +162,23 @@ layouts = [
     #layout.Matrix(**layout_theme),
     #layout.Zoomy(**layout_theme),
     layout.MonadTall(**layout_theme),
-    layout.Max(**layout_theme),
-    layout.Tile(shift_windows=True, **layout_theme),
-    layout.Stack(num_stacks=2),
-    layout.TreeTab(
-         font = "Ubuntu",
-         fontsize = 10,
-         sections = ["FIRST", "SECOND"],
-         section_fontsize = 11,
-         bg_color = "141414",
-         active_bg = "90C435",
-         active_fg = "000000",
-         inactive_bg = "384323",
-         inactive_fg = "a0a0a0",
-         padding_y = 5,
-         section_top = 10,
-         panel_width = 320
-         ),
+    # layout.Max(**layout_theme),
+    # layout.Tile(shift_windows=True, **layout_theme),
+    # layout.Stack(num_stacks=2),
+    # layout.TreeTab(
+    #      font = "Ubuntu",
+    #      fontsize = 10,
+    #      sections = ["FIRST", "SECOND"],
+    #      section_fontsize = 11,
+    #      bg_color = "141414",
+    #      active_bg = "90C435",
+    #      active_fg = "000000",
+    #      inactive_bg = "384323",
+    #      inactive_fg = "a0a0a0",
+    #      padding_y = 5,
+    #      section_top = 10,
+    #      panel_width = 320
+    #      ),
     layout.Floating(**layout_theme)
 ]
 
@@ -280,7 +191,7 @@ colors = [["#282c34", "#282c34"], # panel background
           ["#5FA8D3", "#5FA8D3"], # window name
           ["#BEE9E8", "#BEE9E8"], #bright Text
           ["#1B4965", "#1B4965"]] #dark Text
-        
+
 brightText = colors[7]
 darkText = colors[8]
 
@@ -364,13 +275,12 @@ def init_widgets_list():
               #          background = colors[4],
               #          padding = 5
               #          ),
-            #   widget.TextBox(
-            #            text = '',
-            #            background = colors[0],
-            #            foreground = colors[5],
-            #            padding = 0,
-            #            fontsize = 37
-            #            ),
+              # widget.TextBox(
+              #          text = '◥',
+              #          background = colors[0],
+              #          foreground = colors[5],
+              #          fontsize=32, width=27
+              #          ),
               widget.TextBox(
                        text = " 🌡",
                        padding = 2,
@@ -401,8 +311,8 @@ def init_widgets_list():
               widget.TextBox(
                        foreground = darkText,
                        background = colors[4],
-                       text = "Ausmachen",
-                       mouse_callbacks ={'Button1': lambda qtile: qtile.cmd_spawn(myTerm + ' -e sudo shutdown 0')}
+                       text = "⏻",
+                       mouse_callbacks ={'Button1': lambda qtile: qtile.cmd_spawn("shutdown-dialog")}
                        ),
             #   widget.TextBox(
             #            text = "Updates",
@@ -494,7 +404,7 @@ def init_widgets_list():
                        background = colors[5],
                        padding = 5,
                        format = "%A, %B %d  [ %H:%M ]"
-                       
+
                        ),
             #   widget.Sep(
             #            linewidth = 0,
