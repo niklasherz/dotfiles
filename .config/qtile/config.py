@@ -219,11 +219,17 @@ def init_widgets_list():
               #          mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')}
               #          ),
                        widget.TextBox(
-                                foreground = darkText,
-                                background = colors[4],
+                                #foreground = darkText,
+                                background = colors[0],
                                 text = "⏻",
                                 mouse_callbacks ={'Button1': lambda qtile: qtile.cmd_spawn("shutdown-dialog")}
                                 ),
+                                widget.Sep(
+                                         linewidth = 0,
+                                         padding = 6,
+                                         foreground = colors[2],
+                                         background = colors[0]
+                                         ),
               widget.GroupBox(
                        font = "Ubuntu Bold",
                        fontsize = 9,
