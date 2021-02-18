@@ -53,6 +53,14 @@ keys = [
              lazy.spawn("emacsclient -c -a emacs"),
              desc='Doom Emacs'
              ),
+        Key([mod, "shift"], "f",
+            lazy.spawn("firefox"),
+            desc='Firefox'
+            ),
+        Key([mod, "shift"], "Return",
+            lazy.spawn("pcmanfm"),
+            desc='Launch File Manager'
+            ),
          ### Switch focus to specific monitor (out of three)
          Key([mod], "w",
              lazy.to_screen(0),
