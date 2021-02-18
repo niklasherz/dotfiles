@@ -130,15 +130,15 @@ keys = [
 ]
 
 
-group_names = [("WWW", {'layout': 'monadtall'}),
-               ("DEV", {'layout': 'monadtall'}),
-               ("SYS", {'layout': 'monadtall'}),
-               ("DOC", {'layout': 'monadtall'}),
-               ("VBOX", {'layout': 'monadtall'}),
-               ("CHAT", {'layout': 'monadtall'}),
-               ("MUS", {'layout': 'monadtall'}),
-               ("VID", {'layout': 'monadtall'}),
-               ("MISC", {'layout': 'floating'})]
+group_names = [("一", {'layout': 'monadtall'}),
+               ("二", {'layout': 'monadtall'}),
+               ("三", {'layout': 'monadtall'}),
+               ("四", {'layout': 'monadtall'}),
+               ("五", {'layout': 'monadtall'}),
+               ("六", {'layout': 'monadtall'}),
+               ("七", {'layout': 'monadtall'}),
+               ("八", {'layout': 'monadtall'}),
+               ("九", {'layout': 'floating'})]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
 
@@ -148,7 +148,7 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 layout_theme = {"border_width": 2,
                 "margin": 6,
-                "border_focus": "e1acff",
+                "border_focus": "5FA8D3",
                 "border_normal": "1D2330"
                 }
 
