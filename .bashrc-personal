@@ -9,4 +9,7 @@ alias l.="lsd -A | egrep '^\.'"
 alias brighter='xbacklight -inc 20'
 alias darker='xbacklight -dec 20'
 
+#Battery
+alias bat='cat /sys/class/power_supply/BAT0/capacity'
+
 eval "$(starship init bash)"
