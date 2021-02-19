@@ -278,6 +278,13 @@ def init_widgets_list():
                        background = colors[0],
                        padding = 0
                        ),
+            widget.TextBox(
+                  text = '◥',
+                  background = colors[0],
+                  foreground = colors[6],
+                  fontsize = 60,
+                  width = 27
+                  ),
               widget.TextBox(
                        text = " 🌡",
                        padding = 2,
@@ -292,6 +299,13 @@ def init_widgets_list():
                        padding = 5
                        ),
               widget.TextBox(
+                    text = '◥',
+                    background = colors[6],
+                    foreground = colors[7],
+                    fontsize = 60,
+                    width = 27
+                    ),
+              widget.TextBox(
                        text = " 🖬",
                        foreground = darkText,
                        background = colors[7],
@@ -304,6 +318,13 @@ def init_widgets_list():
                        mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn(myTerm + ' -e htop')},
                        padding = 5
                        ),
+              widget.TextBox(
+                    text = '◥',
+                    background = colors[7],
+                    foreground = colors[8],
+                    fontsize = 60,
+                    width = 27
+                    ),
               widget.Net(
                        interface = "enp34s0",
                        format = '{down} ↓↑ {up}',
@@ -311,6 +332,13 @@ def init_widgets_list():
                        background = colors[8],
                        padding = 5
                        ),
+              widget.TextBox(
+                    text = '◥',
+                    background = colors[8],
+                    foreground = colors[9],
+                    fontsize = 60,
+                    width = 27
+                    ),
               widget.TextBox(
                       text = " Vol:",
                        foreground = darkText,
@@ -322,6 +350,13 @@ def init_widgets_list():
                        background = colors[9],
                        padding = 5
                        ),
+              widget.TextBox(
+                    text = '◥',
+                    background = colors[9],
+                    foreground = colors[10],
+                    fontsize = 60,
+                    width = 27
+                    ),
               widget.CurrentLayoutIcon(
                        custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
                        foreground = darkText,
@@ -334,6 +369,13 @@ def init_widgets_list():
                        background = colors[10],
                        padding = 5
                        ),
+                widget.TextBox(
+                      text = '◥',
+                      background = colors[10],
+                      foreground = colors[11],
+                      fontsize = 60,
+                      width = 27
+                      ),
               widget.Clock(
                        foreground = darkText,
                        background = colors[11],
