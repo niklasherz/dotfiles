@@ -357,12 +357,11 @@ def init_widgets_list():
                     fontsize = 60,
                     width = 27
                     ),
-              widget.CurrentLayoutIcon(
-                       custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
+              widget.TextBox(
+                       text = " ☐",
                        foreground = darkText,
                        background = colors[10],
-                       padding = 0,
-                       scale = 0.7
+                       padding = 0
                        ),
               widget.CurrentLayout(
                        foreground = darkText,
