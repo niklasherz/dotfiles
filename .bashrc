@@ -15,6 +15,9 @@ alias ll='lsd -la'
 alias l='lsd'
 alias l.="lsd -A | egrep '^\.'"
 
+#network
+alias internet='nm-connection-editor'
+
 #Brightness Controls
 alias brighter='xbacklight -inc 20'
 alias darker='xbacklight -dec 20'
@@ -23,3 +26,4 @@ alias darker='xbacklight -dec 20'
 alias bat='cat /sys/class/power_supply/BAT0/capacity'
 
 eval "$(starship init bash)"
+export PATH="$HOME/.emacs.d/bin:$PATH"
