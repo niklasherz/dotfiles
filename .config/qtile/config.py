@@ -49,7 +49,7 @@ keys = [
              lazy.shutdown(),
              desc='Shutdown Qtile'
              ),
-         Key(["control", "shift"], "e",
+         Key([mod, "shift"], "e",
              lazy.spawn("emacsclient -c -a emacs"),
              desc='Doom Emacs'
              ),
