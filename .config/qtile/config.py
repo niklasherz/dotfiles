@@ -50,7 +50,8 @@ keys = [
              desc='Shutdown Qtile'
              ),
          Key([mod, "shift"], "e",
-             lazy.spawn("emacsclient -c -a emacs"),
+             #lazy.spawn("emacsclient -c -a emacs"),
+             lazy.spawn("emacs"),
              desc='Doom Emacs'
              ),
         Key([mod, "shift"], "f",
@@ -76,11 +77,12 @@ keys = [
              ),
          Key([], "XF86AudioPrev",
              lazy.spawn("playerctl previous"),
-             desc='Next Song'
+             desc='Previous Song'
              ),
          Key([], "XF86AudioPlay",
-             lazy.spawn("playerctl play-pause"),
-             desc='Next Song'
+             #lazy.spawn("playerctl play-pause"),
+             lazy.spawn("/home/nik/.config/toggleSpotifyPlay.sh")
+             desc='Play/Pause Song'
              ),
          Key([], "XF86AudioLowerVolume",
              lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%"),
@@ -88,11 +90,11 @@ keys = [
              ),
          Key([], "XF86AudioRaiseVolume",
              lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%"),
-             desc='Lower Volume by 10%'
+             desc='Raise Volume by 10%'
              ),
          Key([], "XF86AudioMute",
              lazy.spawn("pactl set-sink-mute 0 toggle"),
-             desc='Lower Volume by 10%'
+             desc='Mute Volume'
              ),
 
     
