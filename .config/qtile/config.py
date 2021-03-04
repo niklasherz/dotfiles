@@ -70,6 +70,20 @@ keys = [
              lazy.to_screen(1),
              desc='Keyboard focus to monitor 2'
              ),
+         Key([], "XF86AudioNext",
+             lazy.spawn("playerctl next"),
+             desc='Next Song'
+             ),
+         Key([], "XF86AudioPrev",
+             lazy.spawn("playerctl previous"),
+             desc='Next Song'
+             ),
+         Key([], "XF86AudioPlay",
+             lazy.spawn("playerctl play-pause"),
+             desc='Next Song'
+             ),
+          
+         
          # Key([mod], "r",
          #     lazy.to_screen(2),
          #     desc='Keyboard focus to monitor 3'
