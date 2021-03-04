@@ -6,6 +6,7 @@
   - vim
   - Python
   - pcmanfm
+  - emacs
   - doom emacs
   - urxvt (default qtile terminal)
   - spotifyd (add systemctl --user enable spotifyd)
@@ -13,6 +14,8 @@
   - polybar (+ plugins)
   - enpass
   - firefox
+  - starship
+  - git
 
 # Audio (https://www.reddit.com/r/archlinux/comments/950wcg/audio_recording_with_jack_and_reaper/)
   - Reaper
