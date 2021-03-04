@@ -82,12 +82,20 @@ keys = [
              lazy.spawn("playerctl play-pause"),
              desc='Next Song'
              ),
-          
-         
-         # Key([mod], "r",
-         #     lazy.to_screen(2),
-         #     desc='Keyboard focus to monitor 3'
-         #     ),
+         Key([], "XF86AudioLowerVolume",
+             lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%"),
+             desc='Lower Volume by 10%'
+             ),
+         Key([], "XF86AudioRaiseVolume",
+             lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%"),
+             desc='Lower Volume by 10%'
+             ),
+         Key([], "XF86AudioMute",
+             lazy.spawn("pactl set-sink-mute 0 toggle"),
+             desc='Lower Volume by 10%'
+             ),
+
+    
          ### Switch focus of monitors
          Key([mod], "period",
              lazy.next_screen(),
