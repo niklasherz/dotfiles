@@ -12,3 +12,5 @@ xinput set-prop "pointer:Razer Razer DeathAdder V2 Pro" "libinput Accel Speed" -
 polybar left &
 polybar middle &
 polybar right &
+
+enpass &
