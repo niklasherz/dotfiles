@@ -18,6 +18,9 @@ alias l.="lsd -A | egrep '^\.'"
 #network
 alias internet='nm-connection-editor'
 
+#applications
+alias music='spotifyd & && spt'
+
 #Brightness Controls
 alias brighter='xbacklight -inc 20'
 alias darker='xbacklight -dec 20'

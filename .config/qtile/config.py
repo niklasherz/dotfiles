@@ -80,8 +80,8 @@ keys = [
              desc='Previous Song'
              ),
          Key([], "XF86AudioPlay",
-             #lazy.spawn("playerctl play-pause"),
-             lazy.spawn("/home/nik/.config/toggleSpotifyPlay.sh")
+             lazy.spawn("playerctl play-pause"),
+             #lazy.spawn("/home/nik/.config/toggleSpotifyPlay.sh")
              desc='Play/Pause Song'
              ),
          Key([], "XF86AudioLowerVolume",
