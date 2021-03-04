@@ -168,7 +168,7 @@ group_names = [("一", {'layout': 'monadtall'}),
                ("六", {'layout': 'monadtall'}),
                ("七", {'layout': 'monadtall'}),
                ("八", {'layout': 'monadtall'}),
-               ("九", {'layout': 'floating'})]
+               ("九", {'layout': 'monadtall'})]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
 
@@ -209,7 +209,7 @@ layouts = [
     #      section_top = 10,
     #      panel_width = 320
     #      ),
-    layout.Floating(**layout_theme)
+    #layout.Floating(**layout_theme)
 ]
 
 colors = [["#282c34", "#282c34"], # panel background
