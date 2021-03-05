@@ -25,8 +25,8 @@ keys = [
              desc='Launches My Terminal'
              ),
          Key([mod], "space",
-             lazy.spawn("dmenu_run -p 'Run: '"),
-             #lazy.spawn("rofi -show drun -config ~/.config/rofi/themes/dt-dmenu.rasi -display-drun \"Run: \" -drun-display-format \"{name}\""),
+             #lazy.spawn("dmenu_run -p 'Run: '"),
+             lazy.spawn("rofi -show drun -display-drun \"Run: \" -drun-display-format \"{name}\""),
              desc='Run Launcher'
              ),
          Key([mod], "Tab",
