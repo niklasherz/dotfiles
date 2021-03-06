@@ -8,6 +8,9 @@ nitrogen --restore &
 #volumeicon &
 #nm-applet &
 xrandr --output DisplayPort-2 --mode 1920x1080 --rate 143.98 &
+xrandr --output DP-2 --mode 1920x1080 --rate 143.98 &
+xrandr --output DP-3 --mode 1920x1080 --rate 143.98 &
+#TODO Sensitivity Matrix and no Acceleration
 xinput set-prop "pointer:Razer Razer DeathAdder V2 Pro" "libinput Accel Speed" -0.8 &
 polybar left &
 polybar middle &
