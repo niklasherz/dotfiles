@@ -50,3 +50,5 @@
 ;(unpin! t)
 
 (package! evil-tutor)
+(require 'lsp-java)
+(add-hook 'java-mode-hook #'lsp)
