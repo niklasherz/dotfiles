@@ -6,7 +6,7 @@ nitrogen --restore &
 #urxvtd -q -o -f &
 /usr/bin/emacs --daemon &
 #volumeicon &
-#nm-applet &
+nm-applet &
 xrandr --output DisplayPort-2 --mode 1920x1080 --rate 143.98 &
 xrandr --output DP-2 --mode 1920x1080 --rate 143.98 &
 xrandr --output DP-3 --mode 1920x1080 --rate 143.98 &
