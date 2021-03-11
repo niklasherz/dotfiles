@@ -45,7 +45,7 @@ keys = [
              lazy.restart(),
              desc='Restart Qtile'
              ),
-         Key([mod, "shift"], "q",
+         Key([mod, "shift", "control"], "q",
              lazy.shutdown(),
              desc='Shutdown Qtile'
              ),
@@ -62,6 +62,10 @@ keys = [
             lazy.spawn("pcmanfm"),
             desc='Launch File Manager'
             ),
+        Key([mod, "shift"], "d",
+            lazy.spawn("discord"),
+            desc='Launch Discord'
+            ),,
          ### Switch focus to specific monitor (out of three)
          Key([mod], "w",
              lazy.to_screen(0),
