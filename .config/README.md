@@ -16,6 +16,7 @@
   - firefox
   - starship
   - git
+  - dunst (notifications)
 
 # Audio (https://www.reddit.com/r/archlinux/comments/950wcg/audio_recording_with_jack_and_reaper/)
   - Reaper
