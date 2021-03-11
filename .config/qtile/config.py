@@ -65,7 +65,7 @@ keys = [
         Key([mod, "shift"], "d",
             lazy.spawn("discord"),
             desc='Launch Discord'
-            ),,
+            ),
          ### Switch focus to specific monitor (out of three)
          Key([mod], "w",
              lazy.to_screen(0),
