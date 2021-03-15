@@ -504,7 +504,8 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'maketag'},  # gitk
     {'wname': 'branchdialog'},  # gitk
     {'wname': 'pinentry'},  # GPG key password entry
-    {'wmclass': 'ssh-askpass'},  # ssh-askpass
+    {'wname': 'Enpass'},  # Enpass
+    {'wname': 'Enpass showassistant'},  # Enpass Assistant
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
