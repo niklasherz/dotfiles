@@ -112,6 +112,10 @@ keys = [
              lazy.spawn("pactl set-sink-mute 0 toggle"),
              desc='Mute Volume'
              ),
+        Key([mod, "shift"], "s",
+             lazy.spawn("gscreenshot -s -c"),
+             desc='Take a Screenshot'
+             ),
 
     
          ### Switch focus of monitors
@@ -510,6 +514,7 @@ floating_layout = layout.Floating(float_rules=[
     {'wname': 'pinentry'},  # GPG key password entry
     {'wname': 'Enpass'},  # Enpass
     {'wname': 'Enpass showassistant'},  # Enpass Assistant
+    {'wname': 'Steam'} # Steam
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
