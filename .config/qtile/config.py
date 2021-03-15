@@ -66,6 +66,14 @@ keys = [
             lazy.spawn("discord"),
             desc='Launch Discord'
             ),
+        Key([mod, "shift"], "s",
+            lazy.spawn("spotify"),
+            desc='Launch Spotify'
+            ),
+        Key([mod, "shift"], "p",
+            lazy.spawn("/opt/enpass/Enpass showassistant"),
+            desc='Launch enpass'
+            ),
          ### Switch focus to specific monitor (out of three)
          Key([mod], "w",
              lazy.to_screen(0),
