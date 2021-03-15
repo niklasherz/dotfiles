@@ -74,6 +74,10 @@ keys = [
             lazy.spawn("/opt/enpass/Enpass showassistant"),
             desc='Launch enpass'
             ),
+        Key([mod, "shift"], "c",
+            lazy.spawn("gnome-calendar"),
+            desc='Launch Calendar'
+            ),
          ### Switch focus to specific monitor (out of three)
          Key([mod], "w",
              lazy.to_screen(0),
