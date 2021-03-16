@@ -25,3 +25,4 @@
   - jack2
   - cadence
   - pavucontrol
+  - alsa-utils
